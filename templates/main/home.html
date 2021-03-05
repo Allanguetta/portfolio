@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="portfolio-items-wrapper">
+    {% for post in posts %}
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img">
+                <img src="{{ post.image.url }}" alt="image">
+            </div>
+            <div class="subtile">
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.overview }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
